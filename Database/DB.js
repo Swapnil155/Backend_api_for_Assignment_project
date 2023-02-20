@@ -2,6 +2,7 @@ const mongoose =  require('mongoose')
 require('dotenv').config()
 
 const bsURL = process.env.BASE_URL
+console.log(bsURL)
 
 const connetionParams = {
     useNewUrlParser: true,
