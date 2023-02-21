@@ -29,14 +29,16 @@ async function sendEmailOTP(email, otp) {
         text: `OTP : ${otp}`,
     };
 
-    transporter.sendMail(details, (err) => {
-        if (err) {
-            console.log("it has an err", err);
-        } else {
-            console.log("email send");
-            return `email send`
-        }
-    });
+    // return transporter.sendMail(details, (err) => {
+    //     if (err) {
+    //         console.log("it has an err", err);
+    //     } else {
+    //         console.log("email send");
+    //         return `email send`;
+    //     }
+    // });
+
+    return transporter.sendMail(details);
 
 
 }
@@ -268,7 +270,7 @@ module.exports = {
 
 
                 const result = await sendEmailOTP(email, otp)
-                // console.log(result)
+                console.log(result)
                 return res.status(200).json({
                     message: `Successfully resend a OTP`,
                     user: updateOtp,
