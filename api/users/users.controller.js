@@ -29,14 +29,15 @@ async function sendEmailOTP(email, otp) {
         text: `OTP : ${otp}`,
     };
 
-    transporter.sendMail(details, (err) => {
+    transporter.sendMail(details, (err, cb) => {
         if (err) {
             console.log("it has an err", err);
         } else {
-            return `Email send`
             console.log("email send");
+            return `email send`
         }
     });
+
 
 }
 
@@ -266,8 +267,8 @@ module.exports = {
                 }, { new: true })
 
 
-                const result = sendEmailOTP(email, otp)
-                console.log(result)
+                const result = await sendEmailOTP(email, otp)
+                // console.log(result)
                 return res.status(200).json({
                     message: `Successfully resend a OTP`,
                     user: updateOtp,
