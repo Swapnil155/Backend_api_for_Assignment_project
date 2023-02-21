@@ -29,7 +29,7 @@ async function sendEmailOTP(email, otp) {
         text: `OTP : ${otp}`,
     };
 
-    transporter.sendMail(details, (err, cb) => {
+    transporter.sendMail(details, (err) => {
         if (err) {
             console.log("it has an err", err);
         } else {

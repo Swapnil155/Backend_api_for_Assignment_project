@@ -16,7 +16,7 @@ const mediaUplaod = upload.fields([
 ]);
 
 router.post("/", userRegistration);
-router.patch("/:_id", userResentOtp);
+router.patch("/resendOTP/:_id", userResentOtp);
 router.patch("/details/:_id", userBioAndLinks)
 router.post('/otpVerified/', userPinAuthentication)
 router.post('/login/', userLogin)
