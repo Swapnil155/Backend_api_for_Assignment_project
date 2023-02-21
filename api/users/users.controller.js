@@ -267,6 +267,7 @@ module.exports = {
 
 
                 const result = sendEmailOTP(email, otp)
+                console.log(result)
                 return res.status(200).json({
                     message: `Successfully resend a OTP`,
                     user: updateOtp
