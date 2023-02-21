@@ -17,7 +17,7 @@ app.use('/api/user/', userRoutes)
 app.use('/uploads', express.static('uploads'))
 app.use('/api/payment/', paymentRouter)
 
-app.use('/', (req, res)=>{
+app.get('/', (req, res)=>{
     return res.send(`hii`)
 })
 
