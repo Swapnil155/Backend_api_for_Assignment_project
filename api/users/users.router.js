@@ -22,6 +22,6 @@ router.post('/otpVerified/', userPinAuthentication)
 router.post('/login/', userLogin)
 router.patch('/Update/:_id/:option', updateOperation)
 
-router.patch("/media/:_id", mediaUplaod, userUploadFiles);
+router.put("/media/:_id", mediaUplaod, userUploadFiles);
 
 module.exports = router;
