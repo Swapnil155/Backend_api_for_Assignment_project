@@ -378,7 +378,7 @@ module.exports = {
             )
 
             if (!updateBioAndLinks) {
-                return res.status(200).json({
+                return res.status(400).json({
                     Error: [
                         {
                             message: `Data Not found`
