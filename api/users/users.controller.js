@@ -313,7 +313,7 @@ module.exports = {
         const { gender } = req.body
 
 
-        console.log(JSON.stringify(req.files.profileImage))
+        console.log(req.files)
         console.log(JSON.stringify(req.files === undefined))
 
         if (req.files === undefined) {
