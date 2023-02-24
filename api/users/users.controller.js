@@ -323,7 +323,7 @@ module.exports = {
                 ]
             })
         } else {
-            const userImage = req.files[0].profileImage;
+            const userImage = req.files.profileImage;
 
             console.log(userImage)
 
