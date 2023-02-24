@@ -15,7 +15,7 @@ app.use(cors())
 app.use(express.json());
 
 app.use('/api/user/', userRoutes)
-app.use('/uploads', express.static(path.join(__dirname, 'Uploads')))
+app.use('/Uploads', express.static(path.join(__dirname, 'Uploads')))
 app.use('/api/payment/', paymentRouter)
 
 console.log(path.join(__dirname, 'Uploads'))

@@ -3,7 +3,7 @@ const fs = require('fs')
 const path = require('path')
 
 const storage = multer.diskStorage({
-    destination : (req, File, callback) => {
+    destination : (req, Files, callback) => {
         const dir = "Uploads"
 
         if (!fs.existsSync(dir)) {
@@ -12,9 +12,9 @@ const storage = multer.diskStorage({
 
         callback(null, dir)
     },
-    filename : (req, file, callback)=>{
-        callback(null, file.fieldname+'-'+Date.now()+ path.extname(file.originalname))
-        console.log(file.filename)
+    filename : (req, files, callback)=>{
+        callback(null, files.fieldname+'-'+Date.now()+ path.extname(files.originalname))
+        console.log(files.filename)
     },
     // limits : {
     //     fileSize : 100*100
