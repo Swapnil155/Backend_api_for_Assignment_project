@@ -313,8 +313,8 @@ module.exports = {
         const { gender } = req.body
 
 
-        console.log(JSON.stringify(req.file.profileImage))
-        console.log(JSON.stringify(req.files[0]))
+        console.log(JSON.stringify(req.files.profileImage))
+        console.log(JSON.stringify(req.files[0].profileImage))
 
         if (req.file === undefined) {
             return res.status(400).json({
