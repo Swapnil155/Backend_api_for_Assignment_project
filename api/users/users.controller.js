@@ -313,10 +313,10 @@ module.exports = {
         const { gender } = req.body
 
 
-        console.log(JSON.stringify(req.file))
+        console.log(JSON.stringify(req.files))
         // console.log(JSON.stringify(req.files === ''))
 
-        if (req.file === undefined) {
+        if (req.files === undefined) {
             return res.status(400).json({
                 Error: [
                     {
@@ -325,7 +325,7 @@ module.exports = {
                 ]
             })
         } else {
-            const userImage = req.file.profileImage;
+            const userImage = req.files.profileImage;
 
             console.log(userImage)
 
