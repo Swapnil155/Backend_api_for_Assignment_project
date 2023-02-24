@@ -324,7 +324,7 @@ module.exports = {
                 ]
             })
         } else {
-            const userImage = req.files.profileImage[0];
+            const userImage = req.files.profileImage;
 
             console.log(userImage)
 
