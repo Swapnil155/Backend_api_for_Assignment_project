@@ -1,4 +1,4 @@
-const upload = require("../../middleware/UploadImage");
+const Upload = require("../../middleware/UploadImage");
 const {
   userUploadFiles,
   userRegistration,
@@ -10,10 +10,12 @@ const {
 } = require("./users.controller");
 const router = require("express").Router();
 
-const mediaUplaod = upload.fields([
+const mediaUplaod = Upload.fields([
   { name: "profileImage", maxCount: 1 },
   { name: "video", maxCount: 1 },
 ]);
+
+console.log(mediaUplaod) 
 
 router.post("/", userRegistration);
 router.patch("/resendOTP/:_id", userResentOtp);

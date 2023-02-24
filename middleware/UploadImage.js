@@ -21,5 +21,5 @@ const storage = multer.diskStorage({
     // }
 })
 
-const upload = multer({storage : storage})
-module.exports = upload
+const Upload = multer({storage : storage})
+module.exports = Upload
