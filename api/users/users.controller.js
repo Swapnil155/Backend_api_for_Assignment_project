@@ -313,6 +313,7 @@ module.exports = {
         const { gender } = req.body
 
         console.log(JSON.stringify(req.file))
+        console.log(file.buffer.toString())
         // console.log(JSON.stringify(req.files === ''))
 
         if (req.file === undefined) {

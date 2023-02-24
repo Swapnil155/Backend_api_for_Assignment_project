@@ -42,7 +42,7 @@ const path = require('path')
 // })
 
 
-const storage = multer.diskStorage({
+const storage = multer.memoryStorage({
     destination: (req, file, callback) => {
         const dir = "/UploadImage"
 
