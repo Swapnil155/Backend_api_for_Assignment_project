@@ -25,9 +25,9 @@ const storage = multer.diskStorage({
     destination: (req, file, callback) => {
         const dir = "./Uploads"
 
-        if (!fs.existsSync(dir)) {
-            fs.mkdirSync(dir)
-        }
+        // if (!fs.existsSync(dir)) {
+        //     fs.mkdirSync(dir)
+        // }
 
         callback(null, dir)
     },
@@ -40,5 +40,5 @@ const storage = multer.diskStorage({
     // }
 })
 
-const Upload = multer({storage : storage})
+const Upload = multer({ storage: storage })
 module.exports = Upload
