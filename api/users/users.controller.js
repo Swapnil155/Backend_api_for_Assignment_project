@@ -325,7 +325,7 @@ module.exports = {
         } else {
             const userImage = req.files[0];
 
-            console.log(userImage, userVideo)
+            console.log(userImage)
 
             return res.status(200).json({
                 message: `Files Successfully inserted`,
