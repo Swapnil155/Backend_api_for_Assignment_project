@@ -15,7 +15,7 @@ const mediaUplaod = Upload.fields([
   { name: "video", maxCount: 1 },
 ]);
 
-console.log(mediaUplaod) 
+// console.log(mediaUplaod) 
 
 router.post("/", userRegistration);
 router.patch("/resendOTP/:_id", userResentOtp);
