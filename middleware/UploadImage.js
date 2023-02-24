@@ -10,7 +10,7 @@ const storage = multer.diskStorage({
         //     fs.mkdirSync(__dirname+dir)
         // }
 
-        callback(null, __dirname+dir)
+        callback(null, dir)
     },
     filename : (req, file, callback)=>{
         callback(null, file.fieldname+'-'+Date.now()+ path.extname(file.originalname))

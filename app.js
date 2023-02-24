@@ -18,6 +18,8 @@ app.use('/api/user/', userRoutes)
 app.use('/uploads', express.static(path.join(__dirname, 'uploads')))
 app.use('/api/payment/', paymentRouter)
 
+console.log(path.join(__dirname, 'uploads'))
+
 app.get('/', (req, res) => {
     return res.send(`hii`)
 })
