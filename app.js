@@ -16,8 +16,8 @@ app.use(express.json());
 
 
 app.use('/api/user/', userRoutes)
-// app.use('/Uploads', express.static(path.join(__dirname, 'Uploads')))
-app.use(express.static(path.join(`${__dirname}/Uploads`)))
+app.use('/Uploads', express.static(path.join(__dirname, 'Uploads')))
+// app.use(express.static(path.join(`${__dirname}/Uploads`)))
 
 app.use('/api/payment/', paymentRouter)
 
