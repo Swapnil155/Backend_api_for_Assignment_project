@@ -316,7 +316,7 @@ module.exports = {
         console.log(req.files)
         console.log(JSON.stringify(req.files === undefined))
 
-        if (req.files === undefined || req.files === null) {
+        if (req.files === undefined && req.files === null) {
             return res.status(400).json({
                 Error: [
                     {
@@ -331,8 +331,8 @@ module.exports = {
 
             return res.status(200).json({
                 message: `Files Successfully inserted`,
-                    image: userImage, 
-                    // video: userVideo
+                image: userImage,
+                // video: userVideo
             })
 
             // const UpdateMedia = await UserDetails.findByIdAndUpdate(
