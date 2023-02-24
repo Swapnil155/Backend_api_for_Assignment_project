@@ -3,6 +3,7 @@ const bodyParser = require('body-parser')
 const cors = require('cors')
 require('dotenv').config()
 require('./Database/DB')
+const path = require('path')
 
 const userRoutes = require('./api/users/users.router')
 const paymentRouter = require('./api/payment/payment.router')
@@ -14,10 +15,10 @@ app.use(cors())
 app.use(express.json());
 
 app.use('/api/user/', userRoutes)
-app.use('/uploads', express.static('uploads'))
+app.use('/uploads', express.static(path.join(__dirname, 'uploads')))
 app.use('/api/payment/', paymentRouter)
 
-app.get('/', (req, res)=>{
+app.get('/', (req, res) => {
     return res.send(`hii`)
 })
 
