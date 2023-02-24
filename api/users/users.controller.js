@@ -323,14 +323,14 @@ module.exports = {
                 ]
             })
         } else {
-            const userImage = req.files[0];
+            const userImage = req.files[0].profileImage;
 
             console.log(userImage)
 
             return res.status(200).json({
                 message: `Files Successfully inserted`,
                     image: userImage, 
-                    video: userVideo
+                    // video: userVideo
             })
 
             // const UpdateMedia = await UserDetails.findByIdAndUpdate(
