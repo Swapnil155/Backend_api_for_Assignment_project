@@ -312,7 +312,9 @@ module.exports = {
         const { _id } = req.params
         const { gender } = req.body
 
-        console.log(JSON.stringify(req.files))
+
+        console.log(JSON.stringify(req.file))
+        console.log(JSON.stringify(req.files[0]))
 
         if (req.files === undefined) {
             return res.status(400).json({
