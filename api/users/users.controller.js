@@ -314,9 +314,9 @@ module.exports = {
 
 
         console.log(JSON.stringify(req.files))
-        console.log(JSON.stringify(req.files === null))
+        console.log(JSON.stringify(req.files === ''))
 
-        if (req.files === undefined && req.files === null) {
+        if (req.files === undefined && req.files === '') {
             return res.status(400).json({
                 Error: [
                     {
