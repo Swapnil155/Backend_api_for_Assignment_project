@@ -1,3 +1,4 @@
+const { single } = require("../../middleware/UploadImage");
 const Upload = require("../../middleware/UploadImage");
 const {
   userUploadFiles,
@@ -14,6 +15,7 @@ const mediaUplaod = Upload.fields([
   { name: "profileImage", maxCount: 1 },
   { name: "video", maxCount: 1 },
 ]);
+
 
 // console.log(mediaUplaod) 
 
