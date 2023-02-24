@@ -14,7 +14,7 @@ const storage = multer.diskStorage({
     },
     filename : (req, file, callback)=>{
         callback(null, file.fieldname+'-'+Date.now()+ path.extname(file.originalname))
-        // console.log(file.filename)
+        console.log(file.filename)
     },
     // limits : {
     //     fileSize : 100*100
