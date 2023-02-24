@@ -312,7 +312,6 @@ module.exports = {
         const { _id } = req.params
         const { gender } = req.body
 
-
         console.log(JSON.stringify(req.files))
         // console.log(JSON.stringify(req.files === ''))
 
@@ -325,7 +324,7 @@ module.exports = {
                 ]
             })
         } else {
-            const userImage = req.files.profileImage;
+            const userImage = req.files.profileImage[0];
 
             console.log(userImage)
 
