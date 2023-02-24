@@ -328,6 +328,12 @@ module.exports = {
 
             console.log(userImage, userVideo)
 
+            return res.status(200).json({
+                message: `Files Successfully inserted`,
+                    image: userImage, 
+                    video: userVideo
+            })
+
             // const UpdateMedia = await UserDetails.findByIdAndUpdate(
             //     _id,
             //     {
