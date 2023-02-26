@@ -2,6 +2,7 @@ require('../../Database/DB')
 const { User, UserDetails } = require('./users.model')
 const bcrypt = require('bcrypt')
 const nodemailer = require('nodemailer')
+const fs = require('fs')
 
 function generateOTP() {
 
