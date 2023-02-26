@@ -314,8 +314,20 @@ module.exports = {
 
         console.log(JSON.stringify(req.file.profileImage))
         // console.log(req.file.buffer.toString())
-        console.log(`/tmp/${req.file.profileImage[0].path}`) 
+        console.log(`/tmp/${req.file.profileImage}`)
         // console.log(JSON.stringify(req.files === ''))
+
+        const file = req.file;
+
+        // Write file to /tmp directory
+        const filePath = `/tmp/${file.originalname}`;
+        fs.writeFile(filePath, file.buffer, (err) => {
+            if (err) {
+                console.error(err);
+                return res.status(500).send('Error uploading file');
+            }
+            res.send('File uploaded successfully!');
+        });
 
         if (req.file === undefined) {
             return res.status(400).json({
