@@ -46,11 +46,8 @@ const storage = multer.memoryStorage({
     destination: (req, file, callback) => {
         const dir = "/UploadImage"
 
-        if (!fs.existsSync(dir)) {
-            fs.mkdirSync(dir)
-        }
-
-        callback(null, dir)
+       
+        callback(null, '')
         console.log(__dirname + dir)
     },
     filename: (req, file, callback) => {
