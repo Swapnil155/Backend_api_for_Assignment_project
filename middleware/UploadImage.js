@@ -44,7 +44,7 @@ const path = require('path')
 
 const storage = multer.memoryStorage({
     destination: (req, file, callback) => {
-        const dir = "/UploadImage"
+        // const dir = "/UploadImage"
 
        
         callback(null, '')

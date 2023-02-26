@@ -312,9 +312,9 @@ module.exports = {
         const { _id } = req.params
         const { gender } = req.body
 
-        console.log(JSON.stringify(req.file.profileImage))
+        console.log(JSON.stringify(req.file.path))
         // console.log(req.file.buffer.toString())
-        // /tmp/${file.originalname}
+        console.log(`/tmp/${file.originalname}`) 
         // console.log(JSON.stringify(req.files === ''))
 
         if (req.file === undefined) {
@@ -326,9 +326,9 @@ module.exports = {
                 ]
             })
         } else {
-            const userImage = req.file.profileImage;
+            // const userImage = req.file.profileImage;
 
-            console.log(userImage)
+            // console.log(userImage)
 
             return res.status(200).json({
                 message: `Files Successfully inserted`,
