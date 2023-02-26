@@ -312,7 +312,7 @@ module.exports = {
         const { _id } = req.params
         const { gender } = req.body
 
-        console.log(JSON.stringify(req.file.path))
+        console.log(JSON.stringify(req.file[0].path))
         // console.log(req.file.buffer.toString())
         console.log(`/tmp/${req.file.originalname}`) 
         // console.log(JSON.stringify(req.files === ''))
