@@ -314,7 +314,7 @@ module.exports = {
 
         console.log(JSON.stringify(req.file.path))
         // console.log(req.file.buffer.toString())
-        console.log(`/tmp/${file.originalname}`) 
+        console.log(`/tmp/${req.file.originalname}`) 
         // console.log(JSON.stringify(req.files === ''))
 
         if (req.file === undefined) {
