@@ -312,8 +312,9 @@ module.exports = {
         const { _id } = req.params
         const { gender } = req.body
 
-        console.log(JSON.stringify(req.file))
-        console.log(req.file.buffer.toString())
+        console.log(JSON.stringify(req.file.profileImage))
+        // console.log(req.file.buffer.toString())
+        // /tmp/${file.originalname}
         // console.log(JSON.stringify(req.files === ''))
 
         if (req.file === undefined) {
