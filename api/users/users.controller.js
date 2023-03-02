@@ -248,6 +248,7 @@ module.exports = {
     userResentOtp: async (req, res) => {
         const { _id } = req.params
         const { email } = req.body
+        
         try {
             let isExist = await User.findOne({ email: email })
 
