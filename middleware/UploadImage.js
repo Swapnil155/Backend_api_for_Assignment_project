@@ -42,12 +42,12 @@ const path = require('path')
 // })
 
 
-const storage = multer.memoryStorage({
+const storage = multer.diskStorage({
     destination: (req, file, callback) => {
         // const dir = "/UploadImage"
 
        
-        callback(null, '')
+        callback(null, 'public/uploads')
         console.log(__dirname + dir)
     },
     filename: (req, file, callback) => {

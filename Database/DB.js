@@ -9,6 +9,8 @@ const connetionParams = {
     useUnifiedTopology: true,
 }
 
+mongoose.set("strictQuery", false);
+
 mongoose.connect(bsURL, connetionParams).then(() =>{
     console.info(`connection DB`)
 }).catch((e) =>{

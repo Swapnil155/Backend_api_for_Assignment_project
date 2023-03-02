@@ -22,7 +22,7 @@ const mediaUplaod = Upload.single('profileImage');
 // console.log(mediaUplaod) 
 
 router.post("/", userRegistration);
-router.patch("/resendOTP/:_id", userResentOtp);
+router.put("/resendOTP/:_id", userResentOtp);
 router.patch("/details/:_id", userBioAndLinks)
 router.post('/otpVerified/', userPinAuthentication)
 router.post('/login/', userLogin)
