@@ -328,43 +328,43 @@ module.exports = {
 
       // console.log(userImage)
 
-      return res.status(200).json({
-        message: `Files Successfully inserted`,
-        url1: req.protocol + req.hostname,
-        url2: req.protocol + "://" + req.get("Host"),
-        image: userImage,
-        video: userVideo,
-      });
+      //   return res.status(200).json({
+      //     message: `Files Successfully inserted`,
+      //     url1: req.protocol + req.hostname,
+      //     url2: req.protocol + "s://" + req.get("Host"),
+      //     image: userImage,
+      //     video: userVideo,
+      //   });
 
-      //   const UpdateMedia = await UserDetails.findByIdAndUpdate(
-      //     _id,
-      //     {
-      //       $set: {
-      //         Gender: gender,
-      //         media: {
-      //           image: `http://localhost:5000/${req.files.profileImage[0].filename}`,
-      //           video: `http://localhost:5000/${req.files.video[0].filename}`,
-      //         },
-      //       },
-      //     },
-      //     { new: true }
-      //   );
+      const UpdateMedia = await UserDetails.findByIdAndUpdate(
+        _id,
+        {
+          $set: {
+            Gender: gender,
+            media: {
+              image: `https://backend-api-for-assignment.onrender.com/${req.files.profileImage[0].filename}`,
+              video: `https://backend-api-for-assignment.onrender.com/${req.files.video[0].filename}`,
+            },
+          },
+        },
+        { new: true }
+      );
 
-      //   if (!UpdateMedia) {
-      //     return res.status(200).json({
-      //       Error: [
-      //         {
-      //           message: `Failed`,
-      //           data: UpdateMedia,
-      //         },
-      //       ],
-      //     });
-      //   } else {
-      //     return res.status(200).json({
-      //       message: `Files Successfully inserted`,
-      //       data: UpdateMedia,
-      //     });
-      //   }
+      if (!UpdateMedia) {
+        return res.status(200).json({
+          Error: [
+            {
+              message: `Failed`,
+              data: UpdateMedia,
+            },
+          ],
+        });
+      } else {
+        return res.status(200).json({
+          message: `Files Successfully inserted`,
+          data: UpdateMedia,
+        });
+      }
     }
   },
 
