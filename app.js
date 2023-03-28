@@ -16,7 +16,7 @@ app.use(express.json());
 
 app.use("/api/user/", userRoutes);
 
-app.use(express.static(path.join(__dirname, "Uploads")));
+app.use(express.static(path.join(__dirname, "public")));
 
 // app.use('/Uploads', express.static(path.join(__dirname, '/Uploads')))
 // app.use(express.static(path.join(`${__dirname}/Uploads`)))
