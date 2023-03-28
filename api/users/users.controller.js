@@ -313,7 +313,7 @@ module.exports = {
     //     res.send('File uploaded successfully!');
     // });
 
-    if (req.file === undefined) {
+    if (req.files === undefined) {
       return res.status(400).json({
         Error: [
           {
