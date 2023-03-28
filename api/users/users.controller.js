@@ -331,7 +331,7 @@ module.exports = {
       return res.status(200).json({
         message: `Files Successfully inserted`,
         url1: req.protocol + req.hostname,
-        url2: req.protocol + req.get("Host"),
+        url2: req.protocol + "://" + req.get("Host"),
         image: userImage,
         video: userVideo,
       });
