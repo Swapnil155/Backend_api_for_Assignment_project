@@ -330,37 +330,40 @@ module.exports = {
 
       return res.status(200).json({
         message: `Files Successfully inserted`,
+        url1: req.protocol + req.hostname,
+        url2: req.protocol + req.get("Host"),
         image: userImage,
         video: userVideo,
       });
 
       //   const UpdateMedia = await UserDetails.findByIdAndUpdate(
-      //       _id,
-      //       {
-      //           $set: {
-      //               Gender: gender,
-      //               media: {
-      //                   image: `http://localhost:5000/${req.files.profileImage[0].path}`,
-      //                   video: `http://localhost:5000/${req.files.video[0].path}`
-      //               }
-      //           }
-      //       }, { new: true }
-      //   )
+      //     _id,
+      //     {
+      //       $set: {
+      //         Gender: gender,
+      //         media: {
+      //           image: `http://localhost:5000/${req.files.profileImage[0].filename}`,
+      //           video: `http://localhost:5000/${req.files.video[0].filename}`,
+      //         },
+      //       },
+      //     },
+      //     { new: true }
+      //   );
 
       //   if (!UpdateMedia) {
-      //       return res.status(200).json({
-      //           Error: [
-      //               {
-      //                   message: `Failed`,
-      //                   data: UpdateMedia
-      //               }
-      //           ]
-      //       })
+      //     return res.status(200).json({
+      //       Error: [
+      //         {
+      //           message: `Failed`,
+      //           data: UpdateMedia,
+      //         },
+      //       ],
+      //     });
       //   } else {
-      //       return res.status(200).json({
-      //           message: `Files Successfully inserted`,
-      //           data: UpdateMedia
-      //       })
+      //     return res.status(200).json({
+      //       message: `Files Successfully inserted`,
+      //       data: UpdateMedia,
+      //     });
       //   }
     }
   },
